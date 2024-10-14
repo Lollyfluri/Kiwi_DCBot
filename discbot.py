@@ -24,12 +24,12 @@ tokens = {'bot': os.getenv("DiscToken"),
           'giphy': os.getenv("GiphyToken")}
 t = TenGiphPy.Tenor(token=tokens['tenor'])
 g = TenGiphPy.Giphy(token=tokens['giphy'])
- #SHOULD BE REDACTED, this is the token of the bot
+
 
 status = ['Use', 'the', 'prefix', '!']
 intents = discord.Intents.all()
 bot = commands.Bot('!', intents=intents)
-#not sure it works anymore because a python program can't save itself, it has to be saved manually
+
 praisecount = 18
 #ARRAYS***********************************************************************************************************************************************************************************
 campeones_lol = [
@@ -78,7 +78,7 @@ class VoiceError(Exception):
 class YTDLError(Exception):
     pass
 
-#stolen from the official gitbhub, those are the recommended settings.
+
 
 class YTDLSource(discord.PCMVolumeTransformer):
     YTDL_OPTIONS = {
@@ -104,7 +104,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
     ytdl = yt_dlp.YoutubeDL(YTDL_OPTIONS)
 
-    #documentation is really great because it saves me he bulk of the work
+  
 
     def __init__(self, ctx: commands.Context, source: discord.FFmpegPCMAudio, *, data: dict, volume: float = 0.5):
         super().__init__(source, volume)
